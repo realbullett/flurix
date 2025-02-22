@@ -5312,6 +5312,7 @@ do
 	ui.tabs["view"] = window:Page({Name = "View", Icon = "http://www.roblox.com/asset/?id=6031075931"});
 	window:Seperator({Name = "Player"});
 	ui.tabs["movement"] = window:Page({Name = "Movement", Icon = "http://www.roblox.com/asset/?id=6034754445"});
+	ui.tabs["misc"] = window:Page({Name = "Misc", Icon = "http://www.roblox.com/asset/?id=6034684930"});
 	ui.tabs["anti_aim"] = window:Page({Name = "Anti Aim", Icon = "http://www.roblox.com/asset/?id=14760676189"});
 	window:Seperator({Name = "Settings"});
 	ui.tabs["settings"] = window:Page({Name = "Settings", Icon = "http://www.roblox.com/asset/?id=6031280882"});
