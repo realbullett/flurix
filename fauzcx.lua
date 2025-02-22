@@ -2624,14 +2624,14 @@ do
 
 			task.spawn(function()
 				while task.wait() do
-					for i = 1, #"Starhook.club | Fixed By Nazzy UwU" do
-						Watermark.AnimateText = string.sub("Starhook.club | Fixed By Nazzy UwU", 1, i) .. "";
+					for i = 1, #"Flux | FREE WARE" do
+						Watermark.AnimateText = string.sub("Flux | FREE WARE", 1, i) .. "";
 						Title.Text = Watermark.AnimateText .. " " .. Watermark.Name;
 						task.wait(0.4);
 					end;
 
-					for i = #"Starhook.club | Fixed By Nazzy UwU" - 1, 1, -1 do
-						Watermark.AnimateText = string.sub("Starhook.club | Fixed By Nazzy UwU", 1, i) .. "";
+					for i = #"Flux | FREE WARE" - 1, 1, -1 do
+						Watermark.AnimateText = string.sub("Flux | FREE WARE", 1, i) .. "";
 						Title.Text = Watermark.AnimateText .. " " .. Watermark.Name;
 						task.wait(0.4);
 					end;
@@ -2810,8 +2810,8 @@ local hitsounds = {
     ["Rust"] = "rbxassetid://6565371338"
 };
 
-if (not (isfolder("starhook"))) then
-	makefolder("starhook");
+if (not (isfolder("flux"))) then
+	makefolder("flux");
 end;
 
 --// game support
@@ -3043,7 +3043,7 @@ local script_addon = {
 
 --// screengui
 local screen_gui = Instance.new("ScreenGui");
-screen_gui.Name = "https://Starhook.club | Fixed By Nazzy UwU";
+screen_gui.Name = "https://Flux | FREE WARE";
 screen_gui.IgnoreGuiInset = true;
 screen_gui.DisplayOrder = 99999;
 screen_gui.ResetOnSpawn = false;
@@ -3051,7 +3051,7 @@ screen_gui.Enabled = false;
 screen_gui.Parent = core_gui;
 
 local screen_gui_2 = Instance.new("ScreenGui");
-screen_gui_2.Name = "https://Starhook.club | Fixed By Nazzy UwU";
+screen_gui_2.Name = "https://Flux | FREE WARE";
 screen_gui_2.IgnoreGuiInset = true;
 screen_gui_2.DisplayOrder = 99999;
 screen_gui_2.ResetOnSpawn = false;
@@ -4026,9 +4026,9 @@ do
         });
 
 		instances["local_text"] = utility.instance_new("TextLabel", { 
-			Name = "https://Starhook.club | Fixed By Nazzy UwU",
+			Name = "https://Flux | FREE WARE",
 			Parent = screen_gui_2,
-			Text = '<font color="rgb(207, 227, 0)">starhook</font><font color="rgb(255, 255, 255)">.club</font>',
+			Text = '<font color="rgb(207, 227, 0)">flux</font><font color="rgb(255, 255, 255)">.win</font>',
 			BackgroundTransparency = 1,
 			BorderSizePixel = 0,
 			TextStrokeTransparency = 0.5,
@@ -4643,7 +4643,7 @@ do
 					local actual_color = `#{color}`;
 					local text_color = actual_color ~= "#nil" and actual_color or "#cfe300";
 
-					local text = custom_text_enabled and '<font color="' .. text_color .. '">' .. features.get_text(custom_text) .. '</font>' or '<font color="' .. text_color .. '">starhook</font><font color="rgb(255, 255, 255)">.club</font>';
+					local text = custom_text_enabled and '<font color="' .. text_color .. '">' .. features.get_text(custom_text) .. '</font>' or '<font color="' .. text_color .. '">flux</font><font color="rgb(255, 255, 255)">.win</font>';
 					text_label.Text = text;
 					text_label.Position = UDim2.new(0, mouse_position.X, 0, mouse_position.Y + cursor_offset_y);
 				else
@@ -5891,7 +5891,7 @@ do
 		local network_desync = ui.tabs["anti_aim"]:Section({Name = "Network Desync", Side = "Right", Size = 110});
 		local c_sync = ui.tabs["anti_aim"]:Section({Name = "C-Sync", Side = "Right", Size = 300});
 		local fflag = ui.tabs["anti_aim"]:Section({Name = "FFlag Desync", Side = "Left", Size = 95});
-		local starhook_classics = ui.tabs["anti_aim"]:Section({Name = "Starhook Classics", Side = "Left", Size = 150});
+		local starhook_classics = ui.tabs["anti_aim"]:Section({Name = "Flux Classics", Side = "Left", Size = 150});
 
 		--// velocity spoofer
 		do
@@ -5969,19 +5969,19 @@ do
 
 		local current_list = {};
 
-		if not isfolder("starhook") then 
-		    makefolder("starhook");
+		if not isfolder("flux") then 
+		    makefolder("flux");
 		end;
 
-		if not isfolder("starhook/configs") then 
-		    makefolder("starhook/configs");
+		if not isfolder("flux/configs") then 
+		    makefolder("flux/configs");
 		end;
 
 		local function update_config_list()
 		    local list = {};
 		
-		    for idx, file in listfiles("starhook/configs") do
-		        local file_name = file:gsub("starhook/configs\\", ""):gsub(".cfg", ""):gsub("starhook/configs/", "");
+		    for idx, file in listfiles("flux/configs") do
+		        local file_name = file:gsub("flux/configs\\", ""):gsub(".cfg", ""):gsub("flux/configs/", "");
 		        list[#list + 1] = file_name;
 		    end;
 		
@@ -6004,31 +6004,31 @@ do
 
 		cfgs:Button({Name = "Create", Callback = function()
 		    local config_name = flags.settings_configuration_name;
-		    if config_name == "" or isfile("starhook/configs/" .. config_name .. ".cfg") then
+		    if config_name == "" or isfile("flux/configs/" .. config_name .. ".cfg") then
 		        return;
 		    end;
-		    writefile("starhook/configs/" .. config_name .. ".cfg", Library:GetConfig());
+		    writefile("flux/configs/" .. config_name .. ".cfg", Library:GetConfig());
 		    update_config_list();
 		end});
 
 		cfgs:Button({Name = "Save", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        writefile("starhook/configs/" .. selected_config .. ".cfg", Library:GetConfig());
+		        writefile("flux/configs/" .. selected_config .. ".cfg", Library:GetConfig());
 		    end;
 		end});
 
 		cfgs:Button({Name = "Load", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        Library:LoadConfig(readfile("starhook/configs/" .. selected_config .. ".cfg"));
+		        Library:LoadConfig(readfile("flux/configs/" .. selected_config .. ".cfg"));
 		    end;
 		end});
 
 		cfgs:Button({Name = "Delete", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        delfile("starhook/configs/" .. selected_config .. ".cfg");
+		        delfile("flux/configs/" .. selected_config .. ".cfg");
 		    end;
 		    update_config_list();
 		end});
