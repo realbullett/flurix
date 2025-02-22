@@ -5310,6 +5310,7 @@ do
 	window:Seperator({Name = "Visuals"});
 	ui.tabs["world"] = window:Page({Name = "World", Icon = "http://www.roblox.com/asset/?id=6034684930"});
 	ui.tabs["view"] = window:Page({Name = "View", Icon = "http://www.roblox.com/asset/?id=6031075931"});
+	ui.tabs["universal"] = window:Page({Name = "ESP", Icon = "http://www.roblox.com/asset/?id=6034684930"});
 	window:Seperator({Name = "Player"});
 	ui.tabs["movement"] = window:Page({Name = "Movement", Icon = "http://www.roblox.com/asset/?id=6034754445"});
 	ui.tabs["misc"] = window:Page({Name = "Misc", Icon = "http://www.roblox.com/asset/?id=6034684930"});
@@ -5957,9 +5958,13 @@ do
 	--// settings
 	do --// credits to finobe wtv im way too lazy
 		local cfgs = ui.tabs["settings"]:Section({Name = "Config", Side = "Left", Size = 427});
+		local miscs = ui.tabs["misc"]:Section({Name = "Player Misc", Side = "Left", Size = 427});
+		local universals = ui.tabs["universal"]:Section({Name = "Player ESP", Side = "Left", Size = 427});
 		local window = ui.tabs["settings"]:Section({Name = "Window", Side = "Right", Size = 427});
 
 		local cfg_list = cfgs:List({Name = "Config List", Flag = "setting_configuration_list", Options = {}});
+		local miscs_list = cfgs:List({Name = "Misc", Flag = "miscs_configuration_list", Options = {}});
+		local universals_list = cfgs:List({Name = "ESP", Flag = "universals_configuration_list", Options = {}});
 		cfgs:Textbox({Flag = "settings_configuration_name", Placeholder = "Config name"});
 
 		local current_list = {};
@@ -6033,6 +6038,18 @@ do
 		end});
 
 		update_config_list();
+
+		miscs:Button({Name = "Hitbox Expander", Callback = function()
+		    loadstring(game:HttpGet('https://raw.githubusercontent.com/realbullett/legacy/refs/heads/main/brachedAim'))()
+		end});
+
+		miscs:Button({Name = "Infinite Yield", Callback = function()
+		    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		end});
+
+		universals:Button({Name = "ESP", Callback = function()
+		    loadstring(game:HttpGet(('https://pastebin.com/raw/iv9qAHZP'),true))()
+		end});
 
 		--// ui settings
 		window:Keybind({Name = "UI Toggle", Flag = "ui_toggle", Default = Enum.KeyCode.Insert, UseKey = true, Callback = function(key)
